@@ -8,4 +8,4 @@ The Dockerfile base on https://hub.docker.com/r/seitk/pipeline-eks and include g
 
 ## Docker Image
 
-willischou/pipeline-eks-gomplate-gitcrypt:0.7
+shoplineapp/pipeline-eks:0.7
