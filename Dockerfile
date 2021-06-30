@@ -37,7 +37,3 @@ RUN git clone https://github.com/AGWA/git-crypt.git \
     && cd git-crypt \
     && make \
     && make install PREFIX=/usr/local
-# aliyun cli v3.0.14
-RUN curl -L -O https://github.com/aliyun/aliyun-cli/releases/download/v3.0.14/aliyun-cli-linux-amd64.tar.gz \
-    && tar zxvf aliyun-cli-linux-amd64.tar.gz \
-    && sudo mv aliyun /usr/local/bin/aliyun
