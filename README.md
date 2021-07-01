@@ -1,6 +1,6 @@
 # Usage
 
-The Dockerfile base on https://hub.docker.com/r/seitk/pipeline-eks and include gomplate, git-crypt, helm3 and aliyun cli 3.0.14
+The Docker image includes some common tools for pipeline works with EKS, likes gomplate, git-crypt, helm, kubectl and awscli.
 
 1. docker build -t <docker_hub>/pipeline-eks:<image_tag> .
 
@@ -8,4 +8,4 @@ The Dockerfile base on https://hub.docker.com/r/seitk/pipeline-eks and include g
 
 ## Docker Image
 
-shoplineapp/pipeline-eks:0.7
+shoplineapp/pipeline-eks
