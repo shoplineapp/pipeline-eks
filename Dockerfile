@@ -1,10 +1,9 @@
-FROM alpine:3.7 AS builder
+FROM alpine:3.13.6 AS builder
 
 RUN apk add --update --no-cache -t \
-      deps \
       ca-certificates \
       curl \
-      python \
+      python2 \
       py-pip \
       jq \
       git \
