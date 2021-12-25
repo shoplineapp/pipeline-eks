@@ -13,6 +13,7 @@ RUN apt-get install -y \
       bash \
     && pip install --upgrade pip \
     && pip install --no-cache-dir awscli==1.16.270 \
+    && apt-get clean \
     && rm -rf /var/cache/apt/* /root/.cache/pip/*
 
 # kubectl
@@ -33,3 +34,7 @@ RUN git clone https://github.com/AGWA/git-crypt.git \
     && cd git-crypt \
     && make \
     && make install PREFIX=/usr/local
+# nodejs
+RUN curl -sL https://deb.nodesource.com/setup_14.x | bash -
+RUN apt-get install -y nodejs
+RUN npm install -g yarn@1.22.4
