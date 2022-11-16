@@ -28,7 +28,7 @@ RUN apk add --update --no-cache -t \
 RUN curl -LO https://dl.k8s.io/release/v1.21.0/bin/linux/amd64/kubectl \
     && install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
 # argo rollout plugin
-RUN curl -LO https://github.com/argoproj/argo-rollouts/releases/latest/download/kubectl-argo-rollouts-linux-amd64 \
+RUN curl -LO https://github.com/argoproj/argo-rollouts/releases/download/v1.3.1/kubectl-argo-rollouts-linux-amd64 \
     && chmod +x ./kubectl-argo-rollouts-linux-amd64 \
     && mv ./kubectl-argo-rollouts-linux-amd64 /usr/local/bin/kubectl-argo-rollouts
 # gomplate
