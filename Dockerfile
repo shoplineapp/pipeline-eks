@@ -13,7 +13,7 @@ RUN apk add --update --no-cache -t \
       mailcap \
       bash \
     && pip install --upgrade pip \
-    && pip install --no-cache-dir awscli==1.16.270 \
+    && pip install --no-cache-dir awscli==1.18.185 \
     && apk del py-pip \
     && rm -rf /var/cache/apk/* /root/.cache/pip/*
 
@@ -24,6 +24,8 @@ RUN curl -LO https://dl.k8s.io/release/v1.21.0/bin/linux/amd64/kubectl \
 RUN curl -LO https://github.com/hairyhenderson/gomplate/releases/download/v3.6.0/gomplate_linux-amd64-slim \ 
     && chmod +x ./gomplate_linux-amd64-slim \
     && mv ./gomplate_linux-amd64-slim /usr/local/bin/gomplate
+## terraform 0.13.5
+RUN  curl -L -O https://releases.hashicorp.com/terraform/0.13.5/terraform_0.13.5_linux_amd64.zip &&  unzip terraform_0.13.5_linux_amd64.zip -d /usr/local/bin
 # helm v3.2.4
 RUN curl -LO https://get.helm.sh/helm-v3.2.4-linux-amd64.tar.gz \
     && tar -xvf helm-v3.2.4-linux-amd64.tar.gz \
